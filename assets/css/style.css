@@ -10,6 +10,8 @@ body {
 
 
 .header {
+    display: flex;
+    justify-content: space-between;
     padding: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
@@ -58,6 +60,7 @@ a {
 }
 
 p {
+    display: inline-flexbox;
     font-size: 16px;
 }
 
@@ -71,77 +74,87 @@ p {
 }
 
 main {
-    display:flex
+    /* Turns this element into a flexbox */
+    display:flex;
+    flex-wrap: wrap;
 }
 
-aside {
-    flex: 30%;
-    background-color: #b9c6ae;
+.content {
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
     padding: 20px;
-    flex-wrap: wrap; 
+    margin: 1% auto;
 }
 
+    
 section {
     flex: 70%;
     background-color: #fff;
     padding: 20px;
   }
 
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+.card {
+    /* A flex-basis of 200px sets the starting width */
+  /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+    flex: 1 0 200px;  
+    border-style: hidden;
+    border-width: 1px;
+    padding: 10px;
+    align-items: left;
+}
+h2 {
+    float: left;
+    color: navy;
+    font-size: 48px;
+    text-align: left;
+    margin-right: 20px;
+    margin-left: 100px;
 }
 
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+#nature {
+    min-height: 200px;
+    min-width: 100px;
 }
 
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
 
-.search-engine-optimization img {
-    max-height: 200px;
-}
+.card img {
+    height: 50%
+    width: 50%;
 
-.online-reputation-management img {
-    max-height: 200px;
-}
+  }
 
-.social-media-marketing img {
-    max-height: 200px;
-}
+  .card.camera {
+    /* With a flex-grow value of 2, this element grows twice as wide as others */
+    /* The second value, flex-shrink, defines how the element will shrink if it can't fit */
+    flex: 2 1 200px;
+  }
+  
 
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/* Cards are split into two columns at 992px or smaller */
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+    /* Change the header color */
+    header {
+      background: #772014;
+    }
+  }
+  
+  /* Cards are stacked on top of each other at 768px or smaller */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+    main,
+  nav {
+    flex-direction: column;
+  }
+  }
+  
 .footer {
     padding: 30px;
     clear: both;
