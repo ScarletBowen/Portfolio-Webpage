@@ -13,9 +13,13 @@ body {
 .header {
     display: flex;
     justify-content:space-between;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 15px;
+    margin-bottom: 0px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
+
 }
 
 .container {
@@ -26,7 +30,8 @@ body {
 .text-block {
     position:relative;
     background-color: lightcyan ;
-    padding-left: 60px;
+    margin-left: 0px;
+    padding-left: 50px;
     padding-right: 10px;
 }
 h1 {
@@ -60,6 +65,9 @@ a {
     color: lightcyan;
     text-decoration: none;
 }
+nav a:hover {
+  color: #fff;
+}
 
 p {
     display: inline-flexbox;
@@ -68,7 +76,7 @@ p {
     color: #2a607c;
 }
 
-.background {
+.hero {
     height: 200px;
     width: 100%;
     margin-bottom: 25px;
@@ -78,21 +86,21 @@ p {
 }
 
 .container-2 {
-    position: relative;
+  position: relative;
 }
 
 .text-block-2 {
-    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     background-color: lightcyan ;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-right: 5px;
-    margin-top: 125px;
-    margin-left: 500px;
 }
+
 h2 {
     color: #2a607c;
     font-size: 32px;
-    padding-right: 0;
 }
 
 main {
@@ -111,11 +119,6 @@ main {
     margin: 1% auto;
 }
 
-    
-section {
-    flex: 70%;
-    padding: 20px;
-  }
 
 .card {
     display: flex;  
@@ -124,14 +127,67 @@ section {
     padding: 10px;
 }
 
+
 h3 {
-    float: left;
-    color: #2a607c;
-    font-size: 44px;
-    text-align: right;
+  float: left;
+  color: #2a607c;
+  font-size: 44px;
+  justify-content: right;
 }
 
-#nature {
+.container-3 {
+  position: relative;
+}
+
+.text-block-3 {
+    position: absolute;
+    left: 375px;
+    top: 750px;
+    background-color: lightcyan ;
+    padding: 5px;
+    
+}
+.text-block-4 {
+  position: absolute;
+  left: 375px;
+  top: 900px;
+  background-color: lightcyan ;
+  padding: 5px;
+  
+}
+
+.text-block-5 {
+  position: absolute;
+  right: 350px;
+  top: 900px;
+  background-color: lightcyan ;
+  padding: 5px;
+  
+}
+.text-block-6 {
+  position: absolute;
+  right: 300px;
+  top: 1050px;
+  background-color: lightcyan ;
+  padding: 5px;
+  
+}
+
+.text-block-7 {
+  position: absolute;
+  left: 375px;
+  top: 1050px;
+  background-color: lightcyan ;
+  padding: 5px;
+  
+}
+
+h4 {
+    color: #2a607c;
+    font-size: 30px;
+}
+
+.nature {
     height: 300px;
     width: 100%;
     border-style: solid;
@@ -139,54 +195,81 @@ h3 {
     border-color: lightcyan;
 }
 
-.card img {
-    width: 48%;
+a:hover nature {
+    fill-opacity: 50%;
+}
+
+img {
+    float: left;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
     border-style: solid;
     border-color: lightcyan;
     border-width: 5px;
     margin-left: 1%;
     margin-right: 1%;
+    opacity: 1;
+	  -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
   }
 
-  .row {
+  img:hover {
+    opacity: .5;
+  }
+
+.row {
     display: flex;
     flex-wrap: wrap;
   }
   
-  .column {
+.column {
     flex: 50%;
     padding: 5px;
   }
   
-  .vertical-line {
+.vertical-line {
     border-left: 3px solid #2a607c;
     padding-left: 10px;
     margin-left: 330px;
   }
 
-footer {
+.footer-nav {
   display: flex;
-  justify-content: right;
+  
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
 }
 
-footer nav ol {
+
+#profile {
+    float: left;
+    height: 150px;
+    width: 150px;
+    object-fit: cover; 
+    border-style: solid;
+    border-color: lightcyan;
+    border-width: 5px;
+}
+
+.footer nav ol {
     list-style-type: none;
 }
 
-footer nav ol li {
-  display: flex; 
-  justify-content:space-evenly;  
+.footer-nav-ol {
+  display: inline-flex;
+  justify-content: right;
+  padding-top: 115px;
   padding-bottom: 5px;
   border-bottom-style: solid;
-  border-bottom-width: 3px; 
+  border-bottom-width: 3px;
+  margin-left: 25px;
+  padding-left: 10px;
   color: #2a607c;
-  padding-right: 50px;
-  flex-direction: column;
-  float: right;
-  text-align: right;
-  font-size: 20px;   
+  padding-right: 10px; 
   }
+
+
 
 /* Cards are split into two columns at 992px or smaller */
 @media screen and (max-width: 992px) {
