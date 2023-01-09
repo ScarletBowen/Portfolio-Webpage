@@ -88,7 +88,7 @@ p {
     height: 200px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("assets/images/blurdots.JPEG");
+    background-image: url("../assets/images/blurdots.JPEG");
     background-size: cover;
     background-position: center;
 }
