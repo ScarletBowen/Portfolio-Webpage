@@ -6,5 +6,5 @@ This webpage is built with HTML and CSS following responsive design features. It
 ### This webpage is a work in progress
 Webpage in Gitpages: https://scarletbowen.github.io/Portfolio-Webpage/
 
-<img src="/assets/images/thumbnail.jpeg" alt="Preview" title="Preview">
+<img src="/assets/images/thumbnail.png" alt="Preview" title="Preview">
 
