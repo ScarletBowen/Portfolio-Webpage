@@ -246,7 +246,7 @@ img:hover {
   padding-right: 10px; 
   }
 
-
+/* used mobile-friendly first to adjust for small screen */
 @media only screen and (max-width: 600px) {
     .body {
     flex-direction: column
@@ -254,6 +254,7 @@ img:hover {
     }
 }
 
+/* The page is sizing ok for larger screens so I left these commented out */
 /* Cards are stacked on top of each other at 768px or smaller */
 /* @media screen and (max-width: 768px) {
   .card {
