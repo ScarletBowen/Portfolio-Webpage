@@ -148,47 +148,13 @@ h3 {
   position: relative;
 }
 
+/* position titles under images */
 .text-block-3 {
-    position: absolute;
-    left: 375px;
-    top: 750px;
+    position: static;
     background-color: var(--light);
-    padding: 5px;
+    padding-left: 2px;
+    padding-right: 50px;
     
-}
-.text-block-4 {
-  position: absolute;
-  left: 375px;
-  top: 900px;
-  background-color:var(--light);
-  padding: 5px;
-  
-}
-
-.text-block-5 {
-  position: absolute;
-  right: 350px;
-  top: 900px;
-  background-color: var(--light);
-  padding: 5px;
-  
-}
-.text-block-6 {
-  position: absolute;
-  right: 300px;
-  top: 1050px;
-  background-color: var(--light);
-  padding: 5px;
-  
-}
-
-.text-block-7 {
-  position: absolute;
-  left: 375px;
-  top: 1050px;
-  background-color: var(--light) ;
-  padding: 5px;
-  
 }
 
 h4 {
@@ -282,26 +248,30 @@ img:hover {
   }
 
 
+@media only screen and (max-width: 600px) {
+    .body {
+    flex-direction: column
+    width: 100%;
+    }
+}
+
+/* Cards are stacked on top of each other at 768px or smaller */
+/* @media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  main, nav {
+  flex-direction: column;
+  }
+}
+
+/* 
 /* Cards are split into two columns at 992px or smaller */
 @media screen and (max-width: 992px) {
     .card {
-      width: 50%;
+      /* width: 50%; */
     }
-  }
+  } */
+   */
   
-  /* Cards are stacked on top of each other at 768px or smaller */
-@media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
-    }
-    main, nav {
-    flex-direction: column;
-    }
-  }
-
-@media only screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-}
 
