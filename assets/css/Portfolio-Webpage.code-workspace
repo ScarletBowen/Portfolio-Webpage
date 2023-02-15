@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Portfolio-Webpage",
+			"path": "../.."
+		},
+		{
+			"name": "images",
+			"path": "../../../../.Trash/images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio-Webpage"
+	}
+}
